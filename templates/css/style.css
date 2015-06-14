@@ -1,0 +1,27 @@
+.profile-info-name{
+		width: 180px;
+}
+.bankaccount{
+	background-color: #CCE6FA;
+	color: #000000;
+	font-weight: bold;
+}
+.bankaccount span{
+	padding-left:10px;
+}
+.level-line{
+	background-color:rgb(121, 176, 206) !important;
+	font-weight:bold;
+	color:yellow;
+	font-size:12pt;
+	cursor:pointer;
+	border-bottom:2px solid #FFF !important;
+}
+.level-line :hover{
+	background-color:gray;
+}
+.level-open{
+	cursor:pointer;
+	margin-top:-2px;
+	padding-right:3px;
+}
