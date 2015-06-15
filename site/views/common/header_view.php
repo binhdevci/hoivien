@@ -29,47 +29,36 @@
 					</button>
 				</div>
 
-				<div class="navbar-buttons navbar-header pull-right  collapse navbar-collapse" role="navigation">
+				<div class="navbar-buttons navbar-header pull-right" role="navigation">
 					<ul class="nav ace-nav">
-						<li class="light-blue user-min">
+					
+						<li class="light-blue">
 							<a data-toggle="dropdown" href="#" class="dropdown-toggle">
 								<img class="nav-user-photo" src="<?php echo base_url()?>templates/assets/avatars/user.jpg" alt="Jason's Photo" />
-								<span class="user-info">
-									<small>Chào</small>
-									Hoàng Đông
+								<span class="user-info" style="top: 14px;">
+									<small><?
+									if(isset($_SESSION['id_member'])&&$_SESSION['id_member']>0){
+										echo $_SESSION['lb_fullname'];
+									}
+								?></small>
 								</span>
 
 								<i class="ace-icon fa fa-caret-down"></i>
 							</a>
 
 							<ul class="user-menu dropdown-menu-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
+								
 								<li>
-									<a href="#">
-										<i class="ace-icon fa fa-cog"></i>
-										Đổi mật khẩu
-									</a>
-								</li>
-
-								<li>
-									<a href="profile.html">
-										<i class="ace-icon fa fa-user"></i>
-										Thông tin
-									</a>
-								</li>
-
-								<li class="divider"></li>
-
-								<li>
-									<a href="#">
+									<a href="<?=base_url()?>log-out.html">
 										<i class="ace-icon fa fa-power-off"></i>
-										Đăng xuất
+										Logout
 									</a>
 								</li>
 							</ul>
 						</li>
 					</ul>
 				</div>
-
+			
 				<nav role="navigation" class="navbar-menu pull-left collapse navbar-collapse">
 
 				</nav>

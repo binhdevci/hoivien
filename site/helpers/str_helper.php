@@ -183,4 +183,9 @@ function  get_news_common($lb_alias){
 	$rs = $CI->common->get_image_slide_home();
 	return $rs;
  }
+ function formatInputStr($str){
+	$str=stripslashes($str);
+	$str=addslashes($str);
+	return $str;
+}
 ?>
