@@ -188,4 +188,10 @@ function  get_news_common($lb_alias){
 	$str=addslashes($str);
 	return $str;
 }
+function  get_info_person($id_member =0){
+	$CI= & get_instance();
+	$CI->load->model('common_model','common');
+	$rs = $CI->common->get_info_member($id_member);
+	return $rs;
+ }
 ?>

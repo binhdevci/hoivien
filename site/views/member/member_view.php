@@ -26,25 +26,64 @@
 										</thead>
 
 										<tbody>
+										<? for($i=1;$i<=12;$i++){
+											 if($i==12){
+												 break;
+											 }
+											?>
 											<tr>
-												<td colspan="8" class="header level-line"><img class="level-open" src="<?php echo base_url()?>templates/assets/css/images/open.png" /> Tầng 1 đang có 3/3 hội viên</td>
+												<td colspan="8" class="header level-line"><img class="level-open" src="<?php echo base_url()?>templates/assets/css/images/open.png" /> Tầng <? echo $i;?> đang có <? echo count($level[$i+1]);?> /3 hội viên</td>
 											</tr>
+											<? 
+												$j = $i+1;
+												foreach($rs as $row){
+													
+													$f_member ='id_member_lv'.$j;
+													$f_member ='id_member_lv'.$j;
+													$f_cd_member ='cd_member_lev'.$j;
+													$f_lb_fullname ='lb_fullname_lv'.$j;
+													$f_lb_fullname_b ='lb_fullname_lv'.$i;
+													$f_dt_create ='dt_create_lv'.$j;
+													
+													if($row->$f_member >0){
+													
+											?>
 											<tr class="level-1">
-												<td class="center">12345677</td>
+												<td class="center">
+												
+												<?
+											
+												echo $row->$f_cd_member;
+												?>
+												
+												</td>
 
 												<td>
-													<a href="#">Võ Trương Hoàng Đông</a>
+													<a href="javascript:;;"><?
+											
+												echo $row->$f_lb_fullname;
+												?></a>
 												</td>
-												<td>1/6/2015</td>
-												<td class="hidden-480">Hội Quán Thiện Tâm</td>
+												<td><?
+											
+												echo format_date_view($row->$f_dt_create);
+												?></td>
+												<td class="hidden-480"><?
+											
+												echo $row->$f_lb_fullname_b;
+												?></td>
 												<td class="hidden-480">Pending</td>
 
-												<td class="hidden-480">4</td>
-												<td class="hidden-480">13</td>
+												<td class="hidden-480">0</td>
+												<td class="hidden-480">0</td>
 
 												<td>3</td>
 											</tr>
-											<tr>
+											<? 	}
+												}
+											?>
+										<? }?>
+											<!--<tr>
 												<td class="center">12311677</td>
 
 												<td>
@@ -121,7 +160,7 @@
 												<td class="hidden-480"></td>
 
 												<td></td>
-											</tr>
+											</tr>-->
 										</tbody>
 									</table>
 								</div><!-- /.span -->

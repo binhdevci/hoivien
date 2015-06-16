@@ -85,10 +85,12 @@ class Page extends Controller{
 	function create_session($data){
 		$_SESSION['id_member'] = $data->id_member;
 		$_SESSION['lb_fullname'] = $data->lb_fullname;
+		$_SESSION['member'] = $data;
 	}
 	function log_out(){
 		unset($_SESSION['id_member'] );
 		unset($_SESSION['lb_fullname'] );
+		unset($_SESSION['member'] );
 		redirect('/');
 	}
 }
