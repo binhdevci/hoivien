@@ -68,16 +68,17 @@
 											
 												echo format_date_view($row->$f_dt_create);
 												?></td>
-												<td class="hidden-480"><?
-											
-												echo $row->$f_lb_fullname_b;
-												?></td>
+												<td class="hidden-480">
+													<?
+													echo $row->$f_lb_fullname_b;
+													?>
+												</td>
 												<td class="hidden-480">Pending</td>
 
 												<td class="hidden-480">0</td>
 												<td class="hidden-480">0</td>
 
-												<td>3</td>
+												<td>0</td>
 											</tr>
 											<? 	}
 												}
