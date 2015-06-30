@@ -68,7 +68,11 @@ class Page extends Controller{
 					
 					if($rs->bl_active!=1){
 						$flag = false;
-						$error[] ='Tài bạn đã khóa vui lòng liên hệ Administor';
+						$error[] ='Tài khoản  đã khóa vui lòng liên hệ Administrator';
+					}
+					if($rs->bl_delete==1){
+						$flag = false;
+						$error[] ='Tài khoản đã xóa vui lòng liên hệ Administrator';
 					}
 				}
 				$data_chech['rs'] = $rs;

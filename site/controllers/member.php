@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 class Member extends Controller{
 	protected $_templates;
 	function Member(){
@@ -21,7 +21,9 @@ class Member extends Controller{
 					$id_member = (int)$row->$field_id_member;
 					
 					if($id_member >0){
-					  array_push($array_person,$row);
+						if(!in_array($id_member,$array_person)){
+							array_push($array_person,$id_member);
+						}
 					}
 				}
 				$array[$i] = $array_person;
